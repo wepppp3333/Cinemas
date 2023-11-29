@@ -187,20 +187,39 @@ body{
   flex-basis: 260px;
   height: 260px;
   background-image: url("/img_container/card_1.svg");
-  transition: all 0.124s ease;
+  transition: all 1.124s ease;
   z-index: 5;
 }
+.card_1,.card_2,.card_3,.card_4,.card_5,.card_6,.card_7,.card_8,.card_9,.card_10 {
+  position: relative;
+  transition: all 1.124s ease;
+  z-index: 5;
+}
+
 .card_1:hover{
   transform: scale(2);
   margin-left: 100px;
   border-radius: 10px;
+  z-index: 100;
 }
 .card_1:hover .card__logo{
   z-index: -6;
   opacity: 0;
 }
 
+.card_1:hover .abcosut__footer {
+  z-index: 6;
+  opacity: 100;
+}
+
+.card_1:hover .absolut__top {
+  z-index: 6;
+  opacity: 100;
+}
+
+
 .abcosut__footer {
+  transition: all 1.124s ease;
   padding-top: 4px;
   padding-bottom: 10px;
   background-color: rgba(0, 0, 0, 0.47);
@@ -211,6 +230,8 @@ body{
   display: flex;
   justify-content: flex-end;
   gap: 20px;
+  opacity: 0;
+  z-index: -1;
 }
 .absolut__footer_title_text{
   overflow: inherit;
@@ -248,7 +269,7 @@ body{
 .absolut__footer_img {
   width: 65px;
   height: 65px;
-  border-radius: 18px 0 0 18px;
+  border-radius: 18px 0 0 10px;
   background-color: #D9D9D9;
   display: flex;
   flex-direction: column;
@@ -257,10 +278,12 @@ body{
   /* gap: 11px; */
 }
 .absolut__top {
+  transition: all 1.124s ease;
   position: absolute;
   top: 8px;
   left: 9px;
-  /* opacity: 0; */
+  opacity: 0;
+  z-index: -1;
 }
 
 .absolut__header {
@@ -327,6 +350,7 @@ body{
   text-align: center;
   background-color: #515151;
 }
+/* card 2 ______________ */
 
 .card_2{
   flex-basis: 260px;
@@ -335,6 +359,39 @@ body{
   background-image: url("/img_container/card_2.svg");
 }
 
+.card_2:hover{
+  transform: scale(2);
+  margin-left: 0;
+  border-radius: 10px;
+  z-index: 100;
+}
+.card_2:hover .card__logo{
+  z-index: -6;
+  opacity: 0;
+}
+.card_2:hover .abcosut__footer {
+  z-index: 6;
+  opacity: 100;
+}
+
+.card_2:hover .absolut__top {
+  z-index: 6;
+  opacity: 100;
+}
+
+.absolut__logo_img_abc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+.absolut_compani_abc {
+  width: 40px;
+  height: 40px;
+}
+
+/* Card 2____________________ */
+/* card 3 ______________ */
 .card_3{
   flex-basis: 260px;
   height: 260px;
@@ -342,11 +399,46 @@ body{
   background-image: url("/img_container/card_3.svg");
 }
 
+.card_3:hover{
+  transform: scale(2);
+  margin-left: 0;
+  border-radius: 10px;
+  z-index: 100;
+}
+.card_3:hover .card__logo{
+  z-index: -6;
+  opacity: 0;
+}
+.card_3:hover .abcosut__footer {
+  z-index: 6;
+  opacity: 100;
+}
+
+.card_3:hover .absolut__top {
+  z-index: 6;
+  opacity: 100;
+}
+
+.absolut__logo_img_nbc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -3px;
+}
+.absolut_compani_nbc {
+  width: 45px;
+  height: 45px;
+
+}
+
 .card__logo_img_nbc {
   width: 100%;
   padding-left: 19px;
   margin-bottom: -5px;
 }
+
+/* card 3 ______________ */
+/* card4 _________ */
 .card_4{
   flex-basis: 260px;
   height: 260px;
@@ -360,6 +452,46 @@ body{
   padding-left: 20px;
 }
 
+.card_4:hover{
+  transform: scale(2);
+  margin-left: 0;
+  border-radius: 10px;
+  z-index: 100;
+}
+.card_4:hover .card__logo{
+  z-index: -6;
+  opacity: 0;
+}
+.card_4:hover .abcosut__footer {
+  z-index: 6;
+  opacity: 100;
+}
+
+.card_4:hover .absolut__top {
+  z-index: 6;
+  opacity: 100;
+}
+
+.absolut__logo_img_espn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -3px;
+}
+.absolut_compani_espn {
+  width: 45px;
+  height: 45px;
+
+}
+
+.card__logo_img_nbc {
+  width: 100%;
+  padding-left: 19px;
+  margin-bottom: -5px;
+}
+
+/* card 4 _________ */
+/* card 5 _________ */
 .card_5{
   flex-basis: 260px;
   height: 260px;
@@ -374,6 +506,41 @@ body{
   margin-bottom: 5px;
 }
 
+.card_5:hover{
+  transform: scale(2);
+  margin-left: 0;
+  border-radius: 10px;
+  z-index: 100;
+}
+.card_5:hover .card__logo{
+  z-index: -6;
+  opacity: 0;
+}
+.card_5:hover .abcosut__footer {
+  z-index: 6;
+  opacity: 100;
+}
+
+.card_5:hover .absolut__top {
+  z-index: 6;
+  opacity: 100;
+}
+
+.absolut__logo_img_usa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -3px;
+}
+.absolut_compani_usa {
+  width: 45px;
+  height: 45px;
+
+}
+
+
+
+/* card 6 ____________ */
 .card_6{
   flex-basis: 260px;
   height: 260px;
@@ -385,6 +552,35 @@ body{
   margin-bottom: 3px;
   padding-left: 11px;
 }
+
+.card_6:hover{
+  transform: scale(2);
+  margin-right: 150px;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.card_6:hover .card__logo{
+  z-index: -6;
+  opacity: 0;
+}
+.card_6:hover .abcosut__footer,
+.card_6:hover .absolut__top{
+  z-index: 6;
+  opacity: 100;
+}
+
+.absolut__logo_img_tru {
+  padding-left: 11px;
+  margin-bottom: -5px;
+}
+.absolut_compani_tru {
+  width: 45px;
+  height: 45px;
+
+}
+
+/* card 6  ______________ */
 
 /* Recommended Channels______ */
 
@@ -411,6 +607,53 @@ body{
   background-repeat: no-repeat;
 }
 
+/* New Channels card hover */
+.card_7:hover,
+.card_8:hover,
+.card_9:hover,
+.card_10:hover{
+  transform: scale(2);
+  margin-right: 0;
+  border-radius: 10px;
+  z-index: 100;
+}
+.card_7:hover{
+  margin-left: 100px;
+}
+.card_10:hover{
+  margin-right: 150px;
+}
+.card_7:hover .card__logo,
+.card_8:hover .card__logo,
+.card_9:hover .card__logo,
+.card_10:hover .card__logo{
+  z-index: -6;
+  opacity: 0;
+}
+.card_7:hover .abcosut__footer,
+.card_7:hover .absolut__top,
+.card_8:hover .abcosut__footer,
+.card_8:hover .absolut__top,
+.card_9:hover .abcosut__footer,
+.card_9:hover .absolut__top,
+.card_10:hover .abcosut__footer,
+.card_10:hover .absolut__top{
+  z-index: 6;
+  opacity: 100;
+}
+
+.absolut__logo_img_usa {
+  padding-left: 11px;
+}
+.absolut_compani_usa {
+  width: 45px;
+  height: 45px;
+
+}
+
+/* New Channels card hover end ___________ */
+
+/* card 7________________ */
 .card_7 {
   flex-basis: 260px;
   height: 260px;
@@ -421,6 +664,19 @@ body{
   padding-left: 8px;
   margin-bottom: 3px;
 }
+
+.absolut__logo_img_fx {
+  margin-bottom: -5px;
+}
+.absolut_compani_fx {
+  
+  width: 45px;
+  height: 45px;
+
+}
+/* Card 7 __________ */
+
+/* card 8 ____________ */
 .card_8 {
   flex-basis: 260px;
   height: 260px;
@@ -430,6 +686,20 @@ body{
   padding-left: 11px;
   margin-bottom: 3px;
 }
+
+.absolut__logo_img_bravo {
+  padding-left: 5.5px;
+  margin-bottom: -3px;
+}
+.absolut_compani_bravo {
+  
+  width: 45px;
+  height: 45px;
+
+}
+/* card 8 _______________ */
+
+/* card 9 */
 .card_9 {
   flex-basis: 260px;
   height: 260px;
@@ -439,6 +709,18 @@ body{
   padding-left: 7px;
   margin-bottom: 3px;
 }
+.absolut__logo_img_foxnews {
+  padding-left: 5.5px;
+  margin-bottom: -3px;
+}
+.absolut_compani_foxnews {
+  
+  width: 45px;
+  height: 45px;
+
+}
+/* card 9 */
+/* card 10 */
 .card_10 {
   flex-basis: 260px;
   height: 260px;
@@ -448,7 +730,17 @@ body{
   padding-left: 7px;
   margin-bottom: 3px;
 }
+.absolut__logo_img_tbs {
+  padding-left: 5.5px;
+  margin-bottom: -3px;
+}
+.absolut_compani_tbs {
+  
+  width: 45px;
+  height: 45px;
 
+}
+/* /* card 10 */ 
 /* New Channels end */
 
 /* New Movies________ */

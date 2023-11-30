@@ -1,6 +1,7 @@
 @import "normalize.css";
 @import "movies.css";
 @import "series.css";
+@import "/Channels_pages/css/channels.css";
 html {
   box-sizing: border-box;
 }
@@ -93,6 +94,7 @@ body{
   background-size: cover;
   background-repeat:no-repeat;
 }
+
 .slider__title{
   padding-top: 334px;
   padding-left: 70px;
@@ -124,6 +126,7 @@ body{
   cursor: pointer;
   
 }
+
 .slider__btn_right {
   margin-top: 211px;
   margin-left: 99px;
@@ -134,13 +137,14 @@ body{
   background-color: transparent;
   cursor: pointer;
 }
+
+
 .slider_checkbox_1,
 .slider_checkbox_2,
 .slider_checkbox_3,
 .slider_checkbox_4 {
   width: 46px;
   height: 4px;
-  padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;

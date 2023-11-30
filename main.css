@@ -1,6 +1,6 @@
 @import "normalize.css";
-@import "movies.css";
-@import "series.css";
+@import "/Movie_pages/css/movies.css";
+@import "/Series_pages/css/series.css";
 @import "/Channels_pages/css/channels.css";
 html {
   box-sizing: border-box;
@@ -171,8 +171,7 @@ body{
   margin-top: 69px;
 }
 
-.recommended__title {
-}
+
 
 .recommended__card {
   padding-top: 34px;
@@ -340,11 +339,8 @@ body{
   padding-left: 34px;
   margin-bottom: 5px;
 }
-.logo_compani_abc {
 
-}
-.logo_compani_fox {
-}
+
 .logo_compani__title {
   border-radius: 18px 0 0 18px;
   width: 100%;

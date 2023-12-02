@@ -67,22 +67,42 @@ const checkboxSlider4 = document.getElementById('slider_checkbox_4')
 
 // Новый вариант_________
 
-const slider = document.getElementById('slider')
-let selectedButton;
+// const slider = document.getElementById('slider')
+// let selectedButton;
 
-slider.onclick = function (event) {
-  let target = event.target
-  console.log(target);
-  if (target.tagName != 'BUTTON') {
-    button.style.backgroundColor = '#D9D9D9'
-    button.style.opacity = 0.3
-    return
-  }
-  highlight(target)
+
+
+// function printChekox(button) {
+//   if (selectedButton) {
+//     selectedButton.style.backgroundColor = '#D9D9D9'
+//     selectedButton.style.opacity = 0.3
+//   }  
+//   selectedButton = button
+//   selectedButton.style.backgroundColor = '#FFF'
+//   selectedButton.style.opacity = 100
+// }
+
+// slider.onclick = function (event) {
+//   let target = event.target
+//   console.log(target.tagName);
+//   if (target.tagName != 'BUTTON') {
+//     return
+//   }
+//   printChekox(target)
   
-}
+// }
 
-function highlight(button) {
+// Новый вариант
+
+
+const checkboxSlider = document.querySelector('.slider_checkbox_1')
+console.log(checkboxSlider.className);
+const slider = document.getElementById('slider')
+let selectedButton
+
+
+
+function printChekox(button) {
   if (selectedButton) {
     selectedButton.style.backgroundColor = '#D9D9D9'
     selectedButton.style.opacity = 0.3
@@ -91,6 +111,18 @@ function highlight(button) {
   selectedButton.style.backgroundColor = '#FFF'
   selectedButton.style.opacity = 100
 }
+
+slider.onclick = function (event) {
+  let target = event.target
+  console.log(target.tagName);
+  if (target.tagName != 'BUTTON') {
+    return
+  }
+  printChekox(target)
+  
+}
+
+
 
 
 

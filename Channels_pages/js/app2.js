@@ -21,18 +21,23 @@ const listElement = document.getElementById('list')
 
 // console.log(inputElement.value);
 
-const notes = ['записать блок про массивы', 'рассказать теорию объектов']
+const notes = ['записать блок про массивы', 'рассказать теорию объектов', 'asd']
 
 function render () {
-  for (let i = 0; i < notes.length; i++) {
-    console.log(i);
+  // for (let i = 0; i < notes.length; i++) {
+  //   listElement.insertAdjacentHTML('beforeend',
+  //   getNoteTemplate(notes[i])) 
+  // }
+  // listElement.insertAdjacentHTML('beforeend',
+  //   getNoteTemplate(notes[0]) 
+  // )
+  // listElement.insertAdjacentHTML('beforeend',
+  //   getNoteTemplate(notes[1])
+  // )
+  for (let a of notes) {
+    listElement.insertAdjacentHTML('beforeend',
+    getNoteTemplate(a)) 
   }
-  listElement.insertAdjacentHTML('beforeend',
-    getNoteTemplate(notes[0]) 
-  )
-  listElement.insertAdjacentHTML('beforeend',
-    getNoteTemplate(notes[1])
-  )
 }
 
 render()
@@ -64,3 +69,26 @@ function getNoteTemplate(title) {
     </li>
   `
 }
+
+
+
+// Object Theory
+
+const person = {
+  firstName: 'Vladilen',
+  lastName: 'Minin',
+  year: 1993,
+  hasGirlfriend:false,
+  languages: ['ru', 'en', 'de'],
+  getFullName: function () {
+    console.log(person.firstName + ' ' + person.lastName);
+  },
+}
+
+console.log(person.year);
+console.log(person['languages']);
+const key = 'hasGirlfriend'
+console.log(person[key]);
+person.hasGirlfriend = true
+console.log(person[key]);
+person.getFullName()

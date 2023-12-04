@@ -93,6 +93,7 @@ body{
   background-image: url("/Img/slider_bacground.svg");
   background-size: cover;
   background-repeat:no-repeat;
+  transition: all 1.124s ease;
 }
 
 .slider__title{

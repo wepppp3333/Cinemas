@@ -15,9 +15,9 @@
 // console.log(array);
 */
 
-const inputElement = document.getElementById('title') 
-const createBtn = document.getElementById('create') 
-const listElement = document.getElementById('list') 
+// const inputElement = document.getElementById('title') 
+// const createBtn = document.getElementById('create') 
+// const listElement = document.getElementById('list') 
 
 // console.log(inputElement.value);
 
@@ -94,6 +94,10 @@ console.log(person[key]);
 person.getFullName()
 */
 
+
+const inputElement = document.getElementById('title') 
+const createBtn = document.getElementById('create') 
+const listElement = document.getElementById('list') 
 
 const notes = [{
     title: 'Записать блок про массивы',

@@ -6,7 +6,6 @@
   <title>CinemasLive</title>
   <link rel="shortcut icon" href="Img/favicon.png" type="image/png">
   <link rel="stylesheet" href="/main.css">
-  <script src="/app.js"></script>
   <script src="/Series_pages/js/series.js" defer></script>
 </head>
 <body class="movies_bg">
@@ -42,25 +41,32 @@
   </div>
   </div>
   <div class="container">
-    <div class="container__series__header">
+    <div class="container__series__header"
+    id="container__series__header">
       <p class="container__series__header_select">Select</p>
-      <button class="container__series__header_burger" id="create_array_1">
+      <button class="container__series__header_burger" id="create_array_1"
+      data-index="1">
         <img src="/series/Polygon 1.svg" alt="" class="container__series__header_burger_img">
         <p container__series__header_burger_title>Season 1</p>
         
       </button>
       <button class="container__series__header_burger"
-      id="create_array_2">
+      id="create_array_2"
+      data-index="2">
         <img src="/series/Polygon 1.svg" alt="" class="container__series__header_burger_img">
         <p container__series__header_burger_title>Season 2</p>
         
       </button>
-      <button class="container__series__header_burger">
+      <button class="container__series__header_burger"
+      id="create_array_3"
+      data-index="3">
         <img src="/series/Polygon 1.svg" alt="" class="container__series__header_burger_img">
         <p container__series__header_burger_title>Season 3</p>
         
       </button>
-      <button class="container__series__header_burger">
+      <button class="container__series__header_burger"
+      id="create_array_3"
+      data-index="4">
         <img src="/series/Polygon 1.svg" alt="" class="container__series__header_burger_img">
         <p container__series__header_burger_title>Season 4</p>
         
@@ -131,7 +137,7 @@
         </div>  
         <div class="ft__container__menu__block-2">
           <div class="ft__container__menu__block-2_header">
-          <img src="footer_img/carbon_user-avatar.svg" alt="">  
+          <img src="/footer_img/carbon_user-avatar.svg" alt="">  
           <a class="footer_title">Sign in</a>
           </div>
           <a class="footer_text" href="">Personal data</a>

@@ -48,7 +48,9 @@
 .series__card__ep_1 {
   width: 430px;
   height: 240px;
-  /* background-image: url("/series/card_img/card_img_1.svg"); */
+  border-radius: 10px;
+  background-image: url("/series/card_img/card_img_1.svg");
+  background-size: cover;
 }
 .series__card__ep_2 {
   width: 430px;

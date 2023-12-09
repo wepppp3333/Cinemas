@@ -4,6 +4,8 @@ const createBtnArray2 = document.getElementById('create_array_2')
 const createBtnArray3 = document.getElementById('create_array_3')
 const createBtnArray4 = document.getElementById('create_array_4')
 const btnSeasonClick = document.getElementById('container__series__header')
+let p = document.getElementById('movies__slider_info')
+console.log(p.textContent);
 
 
 const arraySeries1 = [{
@@ -129,23 +131,27 @@ const arraySeries4 = [{
 },
 {
   title: 'Season 4  | Ep. 7',
-  backgroundImage: 'https://serialfriends.online/wp-content/uploads/2021/09/druzya-4-sezon-7-seriya-300x170.jpg'
+  backgroundImage: 'https://serialfriends.online/wp-content/uploads/2021/09/druzya-4-sezon-7-seriya-300x170.jpg',
 },
 {
   title: 'Season 4  | Ep. 8',
-  backgroundImage: 'https://serialfriends.online/wp-content/uploads/2021/09/druzya-4-sezon-8-seriya-300x170.jpg'
-},]
+  backgroundImage: 'https://serialfriends.online/wp-content/uploads/2021/09/druzya-4-sezon-8-seriya-300x170.jpg',
+}]
 
+// let c = getListTemplate(arraySeries1[i],i)
+// console.log(c);
 
-function render() {
-  for (let i = 0; i < arraySeries1.length; i++) {
-    listObject.insertAdjacentHTML(
-      'beforeend',
-      getListTemplate(arraySeries1[i],i)
-      )
-  }
+// function render() {
+//   for (let i = 0; i < arraySeries1.length; i++) {
+//     listObject.insertAdjacentHTML(
+//       'beforeend',
+//       getListTemplate(arraySeries1[i],i)
+//       )
+//     console.log(getListTemplate);
+//   }
   
-}
+// }
+// render()
 function newRender(array) {
   for (let i = 0; i < array.length; i++) {
     listObject.insertAdjacentHTML(
@@ -155,8 +161,7 @@ function newRender(array) {
   }
 }
 
-render()
-
+newRender(arraySeries1)
 
 // createBtnArray1.onclick = function () {
 //   listObject.innerHTML = ''
@@ -172,25 +177,29 @@ render()
 //   render2())
 // }
 
-function newClick(a) {
+function newClick(array) {
   listObject.innerHTML = ''
-  listObject.insertAdjacentHTML(`beforeend`,
-  newRender(a))
+  listObject.insertAdjacentElement(`beforeend`,
+   newRender(array))
 }
 
 btnSeasonClick.onclick = function(event){
   if (event.target.dataset.index){
     const index = parseInt(event.target.dataset.index)
     if (index === 1) {
+      p.textContent = '1 Seasons    |   8 Episodes'
       newClick(arraySeries1)
     } else if (index === 2) {
+      p.textContent = '2 Seasons    |   8 Episodes'
       newClick(arraySeries2)
     } else if (index === 3) {
+      p.textContent = '3 Seasons    |   8 Episodes'
       newClick(arraySeries3)
     } else if (index === 4) {
+      p.textContent = '4 Seasons    |   8 Episodes'
       newClick(arraySeries4)
     }
-  }
+  } 
 }
 
 function getListTemplate(index,i){

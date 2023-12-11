@@ -20,8 +20,8 @@ const big = 1_000_000
 // console.log(Number.isNaN(12));
 
 
-const strInt = '42'
-const strFloat = '42.42'
+// const strInt = '42'
+// const strFloat = '42.42'
 
 // console.log(Number(strFloat));
-console.log(Number.parseInt(strFloat));
+// console.log(Number.parseInt(strFloat));

@@ -51,24 +51,24 @@ const names = ['Владилен', 'Елена', 'Игорь', 'Ксения']
 // console.log(capitalNames);
 
 
-const people = [
-  {
-    name: 'Vladilen',
-    budget: 4200,
-  },
-  {
-    name: 'Елена',
-    budget: 15100,
-  },
-  {
-    name: 'Игорь',
-    budget: 300,
-  },
-  {
-    name: 'Ксения',
-    budget: 7520,
-  }
-]
+// const people = [
+//   {
+//     name: 'Vladilen',
+//     budget: 4200,
+//   },
+//   {
+//     name: 'Елена',
+//     budget: 15100,
+//   },
+//   {
+//     name: 'Игорь',
+//     budget: 300,
+//   },
+//   {
+//     name: 'Ксения',
+//     budget: 7520,
+//   }
+// ]
 
 // let findedPerson
 
@@ -98,9 +98,16 @@ const people = [
 // })
 // console.log(sumBudget);
 
+// const byBudget = (p) => p.budget > 5000
+// const pickBudget = (p) => p.budget
 
-const sumBudget = people.filter((p) => p.budget > 5000).map((p) => p.budget).reduce((acc, p) => acc + p, 0)
-console.log(sumBudget);
+// const sumBudget = people.filter(byBudget).map(pickBudget).reduce((acc, p) => acc + p, 0)
+// console.log(sumBudget);
 
 
 // const sumBudget = people
+
+// const string = 'Привет, как дела?'
+// const reversed = string.split('').toReversed().join('!').split('').filter((c) => c != '!').join('')
+
+// console.log(reversed);

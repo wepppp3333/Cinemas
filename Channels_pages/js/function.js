@@ -1,4 +1,4 @@
-// function declaration 
+// function declaration
 // function greet(name) {
 //   console.log('Hello -', name);
 // }
@@ -7,7 +7,6 @@
 // const greet2 = function (name) {
 //   console.log('2Hello -', name);
 // }
-
 
 // greet('Vladilen')
 // greet2('Vladilen')
@@ -27,26 +26,23 @@
 //   }
 // },1000)
 
-
 // Arrow Function
 
-
 function greet(name) {
-  console.log('Hello -', name);
+  console.log("Hello -", name);
 }
-
 
 const arrow = (name, age) => {
-  console.log('Hello -', name, age);
-}
+  console.log("Hello -", name, age);
+};
 
-const arrow2 = (name) => console.log('Hello -', name);
+const arrow2 = (name) => console.log("Hello -", name);
 
 function pow(num, exp) {
-  return Math.pow(num,exp)
+  return Math.pow(num, exp);
 }
 
-const pow2 = (num,exp) => Math.pow(num, exp)
+const pow2 = (num, exp) => Math.pow(num, exp);
 
 // arrow('df', 23)
 // arrow2('Ilya')
@@ -55,7 +51,7 @@ const pow2 = (num,exp) => Math.pow(num, exp)
 
 // Default Parameters
 
-const sum = (a = 40,b = a / 2) => a + b
+const sum = (a = 40, b = a / 2) => a + b;
 
 // console.log(sum(40,2));
 // console.log(sum());
@@ -67,7 +63,7 @@ function sumAll(...numbers) {
   // }
   // return result
 
-  return numbers.reduce((acc, cur) => (acc += cur),0)
+  return numbers.reduce((acc, cur) => (acc += cur), 0);
 }
 
 // console.log(sumAll(1, 2, 3, 4, 5));
@@ -76,10 +72,10 @@ function sumAll(...numbers) {
 
 function createPerson(name) {
   return function (lastname) {
-    console.log(name + ' ' + lastname);
-  }
+    console.log(name + " " + lastname);
+  };
 }
 
-const addLastName = createPerson('Vladilen')
-addLastName('Minin')
-addLastName('Petrov')
+const addLastName = createPerson("Vladilen");
+// addLastName("Minin");
+// addLastName("Petrov");

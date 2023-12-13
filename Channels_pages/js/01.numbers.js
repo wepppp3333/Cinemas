@@ -1,9 +1,7 @@
-const num = 42 // integer
-const float = 32.2 //float
-const pow = 10e3 // 10 в 3 степени 
-const big = 1_000_000
-
-
+// const num = 42; // integer
+// const float = 32.2; //float
+// const pow = 10e3; // 10 в 3 степени
+// const big = 1_000_000;
 
 // console.log(Number.MAX_SAFE_INTEGER);
 // console.log(Math.pow(2,53) - 1);
@@ -18,7 +16,6 @@ const big = 1_000_000
 // const weird = 23 /undefined
 // console.log(Number.isNaN(weird));
 // console.log(Number.isNaN(12));
-
 
 // const strInt = '42'
 // const strFloat = '42.42'

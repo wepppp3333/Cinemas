@@ -9,7 +9,7 @@
   gap: 17px;
 }
 .container__series__header_select {
-  color: #FFF;
+  color: #fff;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -22,18 +22,18 @@
   align-items: center;
   background-color: inherit;
   border-radius: 41px;
-  border: 1px solid #B4B4B4;
+  border: 1px solid #b4b4b4;
   gap: 14px;
   cursor: pointer;
 }
-.container__series__header_burger_title{
-  color: #A7A7A7;
+.container__series__header_burger_title {
+  color: #a7a7a7;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
 }
 
-.container__series__header_burger_img{
+.container__series__header_burger_img {
   background-color: inherit;
 }
 
@@ -71,7 +71,7 @@
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 20px 0px 0px 20px;
   margin-top: 186px;
   margin-left: auto;

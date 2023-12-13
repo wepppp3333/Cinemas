@@ -71,3 +71,5 @@ function format(formatMode) {
       return now.toLocaleTimeString();
   }
 }
+
+

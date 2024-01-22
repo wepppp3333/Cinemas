@@ -11,6 +11,7 @@
 const list = document.querySelector("#list");
 const filter = document.querySelector("#filter");
 let USERS = [];
+sdsad
 
 filter.addEventListener("input", (event) => {
   const value = event.target.value.toLowerCase();

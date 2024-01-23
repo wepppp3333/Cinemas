@@ -1,12 +1,13 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CinemasLive</title>
-  <link rel="shortcut icon" href="Img/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/Img/favicon.png" type="/image/png">
   <link rel="stylesheet" href="/main.css">
-  <script src="/app.js"></script>
+  <script src="/Json_Movies/json_movies.js" defer></script>
+  <script type="module" src="/Movie_pages/js/movies.js" defer></script>
+  
 </head>
 <body class="movies_bg">
   <header class="header">
@@ -40,9 +41,13 @@
     <button class="movies__slider_information_btn">Watch Now</button>
   </div>
   </div>
+  <div class="pole_input">
+    <p class="pole_input_text">Поиск:</p>
+    <input type="text">
+  </div>
   <div class="container movies__container">
-    <div class="new_movies__card">
-      <div class="card_rectangle_2 card_rectangle">
+    <div class="new_movies__card" id="list_films">
+      <!-- <div class="card_rectangle_2 card_rectangle">
       </div>
       <div class="card_rectangle_5 card_rectangle">
       </div>
@@ -55,7 +60,8 @@
       <div class="card_rectangle_6 card_rectangle">
       </div>
       <div class="card_rectangle_1  card_rectangle">
-      </div>
+      </div> -->
+      
       <div class="movies__container__btn_arrow">
         <button class="arrow_btn"></button>
       </div>

@@ -749,7 +749,8 @@ body{
 .new_movies__card{
   padding-top: 34px;
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 30px 30px;
 }
 
 .card_rectangle{

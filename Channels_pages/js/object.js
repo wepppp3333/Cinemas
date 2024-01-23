@@ -1,96 +1,101 @@
-const person = {
-  name: "Vladilen",
-  age: 29,
-  isYoytuber: true,
-  languages: ["ru", "en"],
-  address: {
-    city: "Saint-Petersburg",
-    street: "Nesvky",
-  },
-  "complex key": "complex value",
-  [1 + 2]: "computed value",
-  greet() {
-    console.log("Greet from person");
-  },
-  arrow: () => {
-    console.log("person arrow");
-  },
-  info() {
-    console.log(this);
-    console.log("Person name " + this.name);
-  },
-};
+// const person = {
+//   name: "Vladilen",
+//   age: 29,
+//   isYoutuber: true,
+//   languages: ["ru", "en"],
+//   address: {
+//     city: "Saint-Petersburg",
+//     street: "Nesvky",
+//   },
+//   "complex key": "complex value",
+//   ["key_" + 21 * 2]: "computed value",
+//   greet() {
+//     console.log("Greet from person", this);
+//   },
+//   arrow: () => {
+//     console.log("Person Arrow");
+//   },
+//   info() {
+//     console.log("Peson name", this.name);
+//   },
+// };
 
-// console.log(person);
-// person.greet();
-// person.arrow();
-// person.info()
+// // console.log(person.address);
+// // const addressKey = 'address'
+// // console.log(person[addressKey]);
+// // console.log(person['complex key']);
+// // person.age++
+// // person.languages.push('de')
+// // console.log(person.languages);
+// // person.address = undefined
+// // delete person.address;
+// // console.log(person);
 
-// destructoring
-// const age = person.age;
-// const name = person.name;
-// const languages = person.languages;
-// console.log(languages, age, name);
+// // const age = person.age
+// // const name = person.name
+// // const languages = person.languages
 
-// const name = 'Petr'
-// const {age,name: firstName = 'Test',languages} = person
+// // Деструкторизация
+// // const name = "Petr";
 
-// console.log(person);
-// console.log(languages, age, firstName);
+// // const { age, name: firstName = "TEST", languages } = person;
+// // console.log(languages, age, firstName);
 
-// for (let key in person) {
-//   if (person.hasOwnProperty(key)) {// проверка прототипа
-//     console.log(person[key]);
+// // for (let key in person) {
+// //   if (person.hasOwnProperty(key)) {
+// //     console.log(person[key]);
+// //   }
+// // }
+
+// // Object.keys(person).forEach(key => {
+// //   console.log(person[key]);
+// // })
+
+// const logger = {
+//   keys(withText = true) {
+//     if (withText) {
+//       console.log("Object keys", Object.keys(this));
+//     } else {
+//       console.log(Object.keys(this));
+//     }
+//   },
+//   keysAndValues() {
+//     Object.keys(this).forEach((key) => {
+//       console.log("Key:", key);
+//       console.log("Value", this[key]);
+//     });
+//   },
+// };
+
+// // const bound = logger.keys.bind(person, false);
+// // bound();
+// // logger.keys.call(person, false)
+// // logger.keys.apply(person, [false])
+
+// class Human {
+//   isHuman = true
+//   humanGreet() {
+//     console.log('greet from human');
 //   }
 // }
 
-// современный метод получения ключей
+// class Person extends Human {
+//   constructor(name, age) {
+//     super()
+//     this.name = name ?? 'Undefined name'
+//     this.age = age ?? 'Undefined age'
+//   }
+//   sayHello() {
+//     console.log('Hello from', this.name);
+//   }
+// }
 
-// Object.keys(person).forEach(key => {
-//   console.log(person[key]);
-// })
+// const person1 = new Person('Vladilen',30)
+// const person2 = new Person('Elena')
 
-const logger = {
-  keys() {
-    console.log("Object keys", Object.keys(this));
-  },
+// person1.sayHello()
+// person2.sayHello()
 
-  keysAndValues() {
-    Object.keys(this).forEach((key) => {
-      console.log("Key", key);
-      console.log("Value", this[key]);
-    });
-  },
-};
+// console.log(person1.humanGreet());
 
-// const bound = logger.keys.bind(person)
-// bound()
-// logger.keys.call(person)
-// logger.keys.apply(person)
-class Human {
-  isHuman = true
 
-  humanGreet() {
-    console.log('greet from human');
-  }
-}
-
-class Person extends Human{
-  constructor(name,age) { // этот метод создается автоматом у класса просто не пишется
-    super()
-    this.name = name ?? 'Undifened name'
-    this.age = age ?? 'Indefined age'
-  }
-
-  sayHello() {
-    console.log('Hello from', this.name);
-  }
-}
-
-const person1 = new Person('Vladilen')
-const person2 = new Person('Elena', 21)
-// newPerson.sayHello()
-// Person2.sayHello()
-// console.log(newPerson.humanGreet());
-
-console.log(person1);

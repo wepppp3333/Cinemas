@@ -8,11 +8,26 @@
   background-image: url("/movies/movies_slider.svg");
 }
 
-.movies__slider_information{
+.container__btn_continuation {
+  margin: auto;
+  display: block;
+  border-radius: 60px;
+  padding: 10px 34px;
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  background-color: #e13c52;
+  border: none;
+}
+.none {
+  display: none;
+}
+.movies__slider_information {
   padding-top: 300px;
   padding-left: 60px;
 }
-.movies__slider_title{
+.movies__slider_title {
   margin-bottom: 20px;
   color: #fff;
   font-size: 96px;
@@ -21,45 +36,45 @@
   margin-left: -4px;
 }
 
-.movies__slider_info{
+.movies__slider_info {
   margin-bottom: 22px;
-  color: #A7A7A7;
+  color: #a7a7a7;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
-.movies__slider_text{
-  color: #FFF;
+.movies__slider_text {
+  color: #fff;
   font-size: 32px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
   margin-bottom: 47px;
 }
-.movies__slider_information_btn{
+.movies__slider_information_btn {
   border-radius: 60px;
   padding: 10px 34px;
-  color: #FFF;
+  color: #fff;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  background-color: #E13C52;
+  background-color: #e13c52;
   border: none;
 }
 
-.movies_bg{
+.movies_bg {
   background-image: url("/movies/app\ bg\ 1.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.movies__container{
+.movies__container {
   padding-top: 87px;
   margin-bottom: 100px;
 }
-.movies__container__btn_arrow{
+.movies__container__btn_arrow {
   width: 70px;
   height: 117px;
   border-radius: 12px 0px 0px 12px;
@@ -77,7 +92,7 @@
   width: 31px;
   height: 57px;
   background-color: inherit;
-  color: #FFF;
+  color: #fff;
   background-image: url("/movies/Vector\ 41.svg");
   background-repeat: no-repeat;
   align-items: center;
@@ -94,4 +109,18 @@
 .pole_input_text {
   font-size: 20px;
   font-style: normal;
+}
+
+.movies__container_card_hover {
+  position: relative;
+  transition: all 1.124s ease;
+  z-index: 5;
+}
+
+.movies__container_card_hover:hover {
+  display: block;
+  transform: scale(2);
+  margin-left: 100px;
+  border-radius: 10px;
+  z-index: 100;
 }

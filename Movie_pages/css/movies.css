@@ -112,15 +112,24 @@
 }
 
 .movies__container_card_hover {
-  position: relative;
   transition: all 1.124s ease;
-  z-index: 5;
 }
 
-.movies__container_card_hover:hover {
-  display: block;
-  transform: scale(2);
-  margin-left: 100px;
-  border-radius: 10px;
-  z-index: 100;
+.btn_play_cinemas {
+  transition: all 2.124s ease-in-out;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(49, 46, 46, 0.5);
+  width: 230px;
+  height: 350px;
+  border: none;
+}
+.btn_play_cinemas_img {
+  width: 90px;
+  height: 90px;
+}
+
+.movies__container_card_hover:hover .btn_play_cinemas {
+  display: flex;
 }

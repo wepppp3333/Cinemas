@@ -747,6 +747,7 @@ body{
 /* New Movies________ */
 
 .new_movies__card{
+  margin-bottom: 30px;
   padding-top: 34px;
   display: flex;
   flex-wrap: wrap;

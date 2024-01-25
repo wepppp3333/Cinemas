@@ -7,47 +7,47 @@
   },
   {
     "id": 2,
-    "name": "Пчеловод",
+    "title": "Пчеловод",
     "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1705252981-579313721.jpg"
   },
   {
     "id": 3,
-    "name": "Наполеон",
+    "title": "Наполеон",
     "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1704319769-1691713487.jpg"
   },
   {
     "id": 4,
-    "name": "Аквамен и потерянное царство",
+    "title": "Аквамен и потерянное царство",
     "bacgroundImage": "https://ddxfilm.online/uploads/posts/2023-12/1703227531-1507779348.jpg"
   },
   {
     "id": 5,
-    "name": "Голодные игры: Баллада о змеях и певчих птицах",
+    "title": "Голодные игры: Баллада о змеях и певчих птицах",
     "bacgroundImage": "https://ddxfilm.online/uploads/posts/2023-12/1702841508-411918025.jpg"
   },
   {
     "id": 6,
-    "name": "Пять ночей с Фредди",
+    "title": "Пять ночей с Фредди",
     "bacgroundImage": "https://ddxfilm.online/uploads/posts/2023-10/1698524625-866406714.jpg"
   },
   {
     "id": 7,
-    "name": "Убийцы цветочной луны",
+    "title": "Убийцы цветочной луны",
     "bacgroundImage": "https://ddxfilm.online/uploads/posts/2023-10/1698155634-1093903377.jpg"
   },
   {
     "id": 8,
-    "name": "Пила 10",
+    "title": "Пила 10",
     "bacgroundImage": "https://ddxfilm.online/uploads/posts/2023-10/1696142950-2014549359.jpg"
   },
   {
     "id": 9,
-    "name": "Убийца",
+    "title": "Убийца",
     "bacgroundImage": "https://ddxfilm.online/uploads/posts/2023-10/1698762624-516099094.jpg"
   },
   {
     "id": 10,
-    "name": "Вождь орков",
+    "title": "Вождь орков",
     "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1705853498-149251197.jpg"
   }
 ]

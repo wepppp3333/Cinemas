@@ -2,8 +2,7 @@
   {
     "id": 1,
     "title": "Настоящий детектив",
-    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2021-02/1614089174-1930749882.jpg",
-    "linkPages": "index.html"
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2021-02/1614089174-1930749882.jpg"
   },
   {
     "id": 2,
@@ -47,7 +46,63 @@
   },
   {
     "id": 10,
+    "title": "Следующий гол – победный",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1706129470-1472097976.jpg"
+  },
+  {
+    "id": 11,
     "title": "Вождь орков",
     "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1705853498-149251197.jpg"
+  },
+  {
+    "id": 12,
+    "title": "День основателей",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1706129307-665119956.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Дурные причины",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1706129210-615714336.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Чёрный пояс",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1706129111_e75e0835f0b96278.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Тётечка Эдна",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1706129150-1255329062.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Как по маслу",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1706129118-456868296.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Люди Икс: Апокалипсис",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2021-03/1616172776-373426519.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Эрскинвильские короли",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1706129004-481968432.jpg"
+  },
+  {
+    "id": 19,
+    "title": "Невероятный Халк",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2021-02/1614156793-1031856723.jpg"
+  },
+  {
+    "id": 20,
+    "title": "Оклахома!",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2024-01/1706128991-1896583916.jpg"
+  },
+  {
+    "id": 21,
+    "title": "Люди Икс: Дни минувшего будущего",
+    "bacgroundImage": "https://ddxfilm.online/uploads/posts/2021-02/1614337772-1710369319.jpg"
   }
 ]
+

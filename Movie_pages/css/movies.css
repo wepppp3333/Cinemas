@@ -9,6 +9,7 @@
 }
 
 .container__btn_continuation {
+  transition: all 0.5s ease;
   margin: auto;
   display: block;
   border-radius: 60px;

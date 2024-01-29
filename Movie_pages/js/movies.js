@@ -8,8 +8,6 @@ let filmData = [];
 getFilms();
 
 btn_continuation.addEventListener("click", addClickCards);
-console.log(btn_continuation);
-
 
 // получаем Json файл и парсим его в массив
 async function getFilms() {
@@ -23,7 +21,7 @@ async function getFilms() {
       }
       filmData = await res.json();
     }
-    if (btn_continuation ||
+    if (
       filmData.length > COUNT_SHOW_CARDS_FILM &&
       btn_continuation.classList.contains("none")
     ) {
@@ -51,7 +49,7 @@ function createCardsFilms(data) {
   data.forEach((card) => {
     const { id, bacgroundImage, title } = card;
     const cardFilmsItem = `
-  <div class="card_rectangle_2 card_rectangle movies__container_card_hover" style="background-image: url('${bacgroundImage}');">
+    <div class="card_rectangle_2 card_rectangle movies__container_card_hover" style="background-image: url('${bacgroundImage}');">
     <div class="btn_play_cinemas" href="/index.html">
       <a href="/Movie_pages/movies_cards/card_film.html?id=${id}">
         <img src="/Movie_pages/Image/play_twitter_video_icon_127120.svg" alt="" class="btn_play_cinemas_img">
@@ -67,15 +65,21 @@ function addClickCards() {
   if (showCards >= filmData.length) {
     return;
   }
+
   countClickBtnShowCards++;
   console.log(countClickBtnShowCards);
+
   const countShowCards = COUNT_SHOW_CARDS_FILM * countClickBtnShowCards;
   console.log(countShowCards);
+
   const arrayCards = filmData.slice(showCards, countShowCards);
   console.log(arrayCards);
+
   createCardsFilms(arrayCards);
+
   showCards = listFilms.children.length;
   console.log(showCards);
+
   if (showCards >= filmData.length) {
     btn_continuation.classList.add("none");
   }

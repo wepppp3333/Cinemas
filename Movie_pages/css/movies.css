@@ -5,7 +5,7 @@
   background-size: cover;
 }
 .movies__slider_bg {
-  background-image: url("/movies/movies_slider.svg");
+  background-image: ("/movies/movies_slider.svg");
 }
 
 .container__btn_continuation {

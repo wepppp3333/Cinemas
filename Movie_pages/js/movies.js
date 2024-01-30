@@ -1,5 +1,7 @@
+const listFilmBg = document.querySelector(".movies__slider_bg");
 const listFilms = document.querySelector(".new_movies__card");
 const btn_continuation = document.querySelector(".container__btn_continuation");
+const filter = document.querySelector(".filter");
 const COUNT_SHOW_CARDS_FILM = 7;
 let showCards = COUNT_SHOW_CARDS_FILM;
 let countClickBtnShowCards = 1;
@@ -61,24 +63,45 @@ function createCardsFilms(data) {
   });
 }
 
+filter.addEventListener("input", (event) => {
+  // btn_continuation.classList.add("none");
+  const value = event.target.value.toLowerCase();
+  console.log(value);
+  const filterdFilms = filmData.filter((film) => {
+    return film.title.toLowerCase().includes(value);
+  });
+  const arrFilter = filterdFilms.slice(0,COUNT_SHOW_CARDS_FILM)
+  const arrFilter2 = arrFilter.map(createFilterCards).join('')
+  listFilms.innerHTML = arrFilter2
+  console.log(arrFilter2);
+});
+
+function createFilterCards(data) {
+  return `
+  <div class="card_rectangle_2 card_rectangle movies__container_card_hover" style="background-image: url('${data.bacgroundImage}');">
+  <div class="btn_play_cinemas" href="/index.html">
+    <a href="/Movie_pages/movies_cards/card_film.html?id=${data.id}">
+      <img src="/Movie_pages/Image/play_twitter_video_icon_127120.svg" alt="" class="btn_play_cinemas_img">
+    </a>
+  </div>
+</div>
+  `
+}
+
 function addClickCards() {
   if (showCards >= filmData.length) {
     return;
   }
 
   countClickBtnShowCards++;
-  console.log(countClickBtnShowCards);
 
   const countShowCards = COUNT_SHOW_CARDS_FILM * countClickBtnShowCards;
-  console.log(countShowCards);
 
   const arrayCards = filmData.slice(showCards, countShowCards);
-  console.log(arrayCards);
 
   createCardsFilms(arrayCards);
-
+  
   showCards = listFilms.children.length;
-  console.log(showCards);
 
   if (showCards >= filmData.length) {
     btn_continuation.classList.add("none");

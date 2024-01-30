@@ -1,11 +1,11 @@
 .movies__slider {
   min-width: 1903px;
   height: 829px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .movies__slider_bg {
-  background-image: ("/movies/movies_slider.svg");
+  background-position: center;
+  background-size: cover;
+  background-image: url(/Movie_pages/Image/img_slider.svg);
 }
 
 .container__btn_continuation {
@@ -36,7 +36,7 @@
 .movies__slider_title {
   margin-bottom: 20px;
   color: #fff;
-  font-size: 96px;
+  font-size: 54px;
   font-style: normal;
   font-weight: 300;
   margin-left: -4px;
@@ -68,6 +68,7 @@
   font-weight: 500;
   background-color: #e13c52;
   border: none;
+  cursor: pointer;
 }
 
 .movies_bg {
@@ -138,4 +139,9 @@
 
 .movies__container_card_hover:hover .btn_play_cinemas {
   display: flex;
+}
+
+.video_movies {
+  width: 1800px;
+  height: 500px;
 }

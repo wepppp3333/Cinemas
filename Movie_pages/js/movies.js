@@ -6,6 +6,7 @@ const COUNT_SHOW_CARDS_FILM = 7;
 let showCards = COUNT_SHOW_CARDS_FILM;
 let countClickBtnShowCards = 1;
 let filmData = [];
+let a = [];
 
 getFilms();
 
@@ -22,6 +23,7 @@ async function getFilms() {
         throw new Error(res.statusText);
       }
       filmData = await res.json();
+      console.log(filmData);
     }
     if (
       filmData.length > COUNT_SHOW_CARDS_FILM &&
@@ -63,47 +65,56 @@ function createCardsFilms(data) {
   });
 }
 
-filter.addEventListener("input", (event) => {
-  // btn_continuation.classList.add("none");
-  const value = event.target.value.toLowerCase();
-  console.log(value);
-  const filterdFilms = filmData.filter((film) => {
-    return film.title.toLowerCase().includes(value);
-  });
-  const arrFilter = filterdFilms.slice(0,COUNT_SHOW_CARDS_FILM)
-  const arrFilter2 = arrFilter.map(createFilterCards).join('')
-  listFilms.innerHTML = arrFilter2
-  console.log(arrFilter2);
-});
-
 function createFilterCards(data) {
+  const { bacgroundImage, id } = data;
   return `
-  <div class="card_rectangle_2 card_rectangle movies__container_card_hover" style="background-image: url('${data.bacgroundImage}');">
+  <div class="card_rectangle_2 card_rectangle movies__container_card_hover" style="background-image: url('${bacgroundImage}');">
   <div class="btn_play_cinemas" href="/index.html">
-    <a href="/Movie_pages/movies_cards/card_film.html?id=${data.id}">
+    <a href="/Movie_pages/movies_cards/card_film.html?id=${id}">
       <img src="/Movie_pages/Image/play_twitter_video_icon_127120.svg" alt="" class="btn_play_cinemas_img">
     </a>
   </div>
 </div>
-  `
+  `;
 }
 
+filter.addEventListener("input", (event) => {
+  const value = event.target.value.toLowerCase();
+  if (value.length === 0) {
+    btn_continuation.classList.remove("none");
+  }
+  const filterdFilms = filmData.filter((film) => {
+    return film.title.toLowerCase().includes(value);
+  });
+
+  const arrFilter = filterdFilms.slice(0, COUNT_SHOW_CARDS_FILM);
+  a = filterdFilms;
+  if (a.length >= COUNT_SHOW_CARDS_FILM) {
+    btn_continuation.classList.remove("none");
+  } else {
+    btn_continuation.classList.add("none");
+  }
+  console.log("a для проверки ", a);
+  const arrFilter2 = arrFilter.map(createFilterCards).join("");
+  console.log(filterdFilms);
+  listFilms.innerHTML = arrFilter2;
+});
+
 function addClickCards() {
-  if (showCards >= filmData.length) {
+  if (showCards >= a.length) {
     return;
   }
-
+  console.log("переменная а ", a.length);
   countClickBtnShowCards++;
 
   const countShowCards = COUNT_SHOW_CARDS_FILM * countClickBtnShowCards;
-
-  const arrayCards = filmData.slice(showCards, countShowCards);
+  const arrayCards = a.slice(showCards, countShowCards);
 
   createCardsFilms(arrayCards);
-  
-  showCards = listFilms.children.length;
 
-  if (showCards >= filmData.length) {
+  showCards = listFilms.children.length;
+  console.log(showCards);
+  if (showCards >= a.length || a.length <= COUNT_SHOW_CARDS_FILM) {
     btn_continuation.classList.add("none");
   }
 }

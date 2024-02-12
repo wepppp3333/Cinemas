@@ -7,6 +7,7 @@ let showCards = COUNT_SHOW_CARDS_FILM;
 let countClickBtnShowCards = 1;
 let filmData = [];
 let a = [];
+let c = 1;
 
 getFilms();
 
@@ -23,7 +24,6 @@ async function getFilms() {
         throw new Error(res.statusText);
       }
       filmData = await res.json();
-      console.log(filmData);
     }
     if (
       filmData.length > COUNT_SHOW_CARDS_FILM &&
@@ -37,15 +37,18 @@ async function getFilms() {
   }
 }
 
-// Функция которая делит масив на столько элементов сколько указано в нашей перемененой
+// Функция которая делит масив на столько элементов сколько указано в нашей перемененой и рендерит первую страницу
 function renderStartPage(data) {
   if (!data || !data.length) {
     // если пришел false выдаем ошибку
     show.Eror.Mesage("Не пришли данные с сервера или пришел пустой массив");
     return;
   }
-  const arrCardsFilms = data.slice(0, COUNT_SHOW_CARDS_FILM);
-  createCardsFilms(arrCardsFilms);
+  const arrCardsFilms = data
+    .slice(0, COUNT_SHOW_CARDS_FILM)
+    .map(createFilterCards)
+    .join("");
+  listFilms.innerHTML = arrCardsFilms;
 }
 
 // Создание карточки
@@ -65,6 +68,7 @@ function createCardsFilms(data) {
   });
 }
 
+// Создание карточки поиска
 function createFilterCards(data) {
   const { bacgroundImage, id } = data;
   return `
@@ -79,42 +83,67 @@ function createFilterCards(data) {
 }
 
 filter.addEventListener("input", (event) => {
+  countClickBtnShowCards = 1;
+  showCards = COUNT_SHOW_CARDS_FILM;
+
   const value = event.target.value.toLowerCase();
   if (value.length === 0) {
     btn_continuation.classList.remove("none");
   }
+
   const filterdFilms = filmData.filter((film) => {
     return film.title.toLowerCase().includes(value);
   });
 
   const arrFilter = filterdFilms.slice(0, COUNT_SHOW_CARDS_FILM);
   a = filterdFilms;
+  console.log("Сгенерированный масив после филтрации ", filterdFilms);
+
   if (a.length >= COUNT_SHOW_CARDS_FILM) {
     btn_continuation.classList.remove("none");
   } else {
     btn_continuation.classList.add("none");
   }
-  console.log("a для проверки ", a);
+
   const arrFilter2 = arrFilter.map(createFilterCards).join("");
-  console.log(filterdFilms);
   listFilms.innerHTML = arrFilter2;
 });
 
 function addClickCards() {
-  if (showCards >= a.length) {
+  // if (showCards >= a.length) {
+  //   return;
+  // }
+  // countClickBtnShowCards++;
+
+  // const countShowCards = COUNT_SHOW_CARDS_FILM * countClickBtnShowCards;
+  // const arrayCards = a.slice(showCards, countShowCards);
+
+  // createCardsFilms(arrayCards);
+
+  // showCards = listFilms.children.length;
+
+  // if (showCards >= a.length || a.length <= COUNT_SHOW_CARDS_FILM) {
+  //   btn_continuation.classList.add("none");
+  // }
+    click(filmData);
+    
+    click(a);
+}
+
+function click(array) {
+  if (showCards >= array.length) {
     return;
   }
-  console.log("переменная а ", a.length);
   countClickBtnShowCards++;
 
   const countShowCards = COUNT_SHOW_CARDS_FILM * countClickBtnShowCards;
-  const arrayCards = a.slice(showCards, countShowCards);
+  const arrayCards = array.slice(showCards, countShowCards);
 
   createCardsFilms(arrayCards);
 
   showCards = listFilms.children.length;
-  console.log(showCards);
-  if (showCards >= a.length || a.length <= COUNT_SHOW_CARDS_FILM) {
+
+  if (showCards >= array.length || array.length <= COUNT_SHOW_CARDS_FILM) {
     btn_continuation.classList.add("none");
   }
 }

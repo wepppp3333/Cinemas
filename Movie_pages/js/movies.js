@@ -7,7 +7,6 @@ let showCards = COUNT_SHOW_CARDS_FILM;
 let countClickBtnShowCards = 1;
 let filmData = [];
 let a = [];
-let c = 1;
 
 getFilms();
 
@@ -31,6 +30,7 @@ async function getFilms() {
     ) {
       btn_continuation.classList.remove("none");
     }
+    a = filmData;
     renderStartPage(filmData);
   } catch (err) {
     console.log(err);
@@ -51,7 +51,7 @@ function renderStartPage(data) {
   listFilms.innerHTML = arrCardsFilms;
 }
 
-// Создание карточки
+// Создание карточки добавления на кнопку
 function createCardsFilms(data) {
   data.forEach((card) => {
     const { id, bacgroundImage, title } = card;
@@ -82,6 +82,7 @@ function createFilterCards(data) {
   `;
 }
 
+// Поиск фильмов
 filter.addEventListener("input", (event) => {
   countClickBtnShowCards = 1;
   showCards = COUNT_SHOW_CARDS_FILM;
@@ -97,7 +98,6 @@ filter.addEventListener("input", (event) => {
 
   const arrFilter = filterdFilms.slice(0, COUNT_SHOW_CARDS_FILM);
   a = filterdFilms;
-  console.log("Сгенерированный масив после филтрации ", filterdFilms);
 
   if (a.length >= COUNT_SHOW_CARDS_FILM) {
     btn_continuation.classList.remove("none");
@@ -109,41 +109,20 @@ filter.addEventListener("input", (event) => {
   listFilms.innerHTML = arrFilter2;
 });
 
+// Логика клика по кнопке ёще
 function addClickCards() {
-  // if (showCards >= a.length) {
-  //   return;
-  // }
-  // countClickBtnShowCards++;
-
-  // const countShowCards = COUNT_SHOW_CARDS_FILM * countClickBtnShowCards;
-  // const arrayCards = a.slice(showCards, countShowCards);
-
-  // createCardsFilms(arrayCards);
-
-  // showCards = listFilms.children.length;
-
-  // if (showCards >= a.length || a.length <= COUNT_SHOW_CARDS_FILM) {
-  //   btn_continuation.classList.add("none");
-  // }
-    click(filmData);
-    
-    click(a);
-}
-
-function click(array) {
-  if (showCards >= array.length) {
+  if (showCards >= a.length) {
     return;
   }
   countClickBtnShowCards++;
 
   const countShowCards = COUNT_SHOW_CARDS_FILM * countClickBtnShowCards;
-  const arrayCards = array.slice(showCards, countShowCards);
-
+  const arrayCards = a.slice(showCards, countShowCards);
   createCardsFilms(arrayCards);
 
   showCards = listFilms.children.length;
 
-  if (showCards >= array.length || array.length <= COUNT_SHOW_CARDS_FILM) {
+  if (showCards >= a.length || a.length <= COUNT_SHOW_CARDS_FILM) {
     btn_continuation.classList.add("none");
   }
 }
